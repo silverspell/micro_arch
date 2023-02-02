@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  books-api:
+    build: ./books-api
+    environment:
+      - MAY_ENCOUNTER_ERROR=0
+    
+  
+  reading-list-api:
+    build: ./reading-list-api
+    ports:
+      - "8080:8080"
